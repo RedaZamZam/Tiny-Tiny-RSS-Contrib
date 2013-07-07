@@ -393,7 +393,6 @@ function slidePages(fromPage, toPage, backwards)
 
 	clearInterval(checkTimer);
 	
-  /*
 	if (canDoSlideAnim() && axis != 'y')
 	{
 	  slide2(fromPage, toPage, backwards, slideDone);
@@ -402,8 +401,6 @@ function slidePages(fromPage, toPage, backwards)
 	{
 	  slide1(fromPage, toPage, backwards, axis, slideDone);
 	}
-  */
-  slideDone();
 
 	function slideDone()
 	{
@@ -429,9 +426,9 @@ function slide1(fromPage, toPage, backwards, axis, cb)
 
 	scrollTo(0, 1);
 	toPage.setAttribute("selected", "true");
-	var percent = 100;
+	var percent = 0;
 	slide();
-	var timer = setInterval(slide, slideInterval);
+	//var timer = setInterval(slide, slideInterval);
 
 	function slide()
 	{
@@ -439,7 +436,7 @@ function slide1(fromPage, toPage, backwards, axis, cb)
 		if (percent <= 0)
 		{
 			percent = 0;
-			clearInterval(timer);
+			//clearInterval(timer);
 			cb();
 		}
 	

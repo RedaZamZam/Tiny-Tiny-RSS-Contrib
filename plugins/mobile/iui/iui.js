@@ -393,6 +393,7 @@ function slidePages(fromPage, toPage, backwards)
 
 	clearInterval(checkTimer);
 	
+  /*
 	if (canDoSlideAnim() && axis != 'y')
 	{
 	  slide2(fromPage, toPage, backwards, slideDone);
@@ -401,6 +402,8 @@ function slidePages(fromPage, toPage, backwards)
 	{
 	  slide1(fromPage, toPage, backwards, axis, slideDone);
 	}
+  */
+  slideDone();
 
 	function slideDone()
 	{
